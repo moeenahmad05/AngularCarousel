@@ -1,27 +1,59 @@
 
 <!-- Slideshow container -->
+<!-- <div >
+
+  <div *ngIf="itemToShow==1">
+
+      index1
+
+      <img src="">
+
+  </div>
+
+  <div *ngIf="itemToShow==2">
+
+      index2
+
+      <img src="">
+
+  </div>
+
+  <div *ngIf="itemToShow==3">
+
+      index 3
+
+      <img src="">
+
+  </div>
+
+</div> -->
+
 <div class="slideshow-container">
 
   <div>{{title}}</div>
   <br>
 
   <!-- Full-width images with number and caption text -->
+  <div *ngIf="itemToShow==1"> 
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
     <img src="assests/apple.jpeg" style="width:100%">
     <div class="text">Caption Text</div>
   </div>
-
+  </div>
+  <div *ngIf="itemToShow==2">
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
     <img src="assests/apple.jpeg" style="width:100%">
     <div class="text">Caption Two</div>
   </div>
-
+  </div>
+  <div *ngIf="itemToShow==3">
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="assests/apple.jpeg" style="width:100%">
+    <img src="img3.jpg" style="width:100%">
     <div class="text">Caption Three</div>
+  </div>
   </div>
 
   <!-- Next and previous buttons -->
@@ -35,5 +67,13 @@
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<div>
+
+  <button (click) = "next()">Next</button><br/>
+
+  <button (click) = "previous()">Previous</button>
+
 </div>
 <router-outlet></router-outlet>
